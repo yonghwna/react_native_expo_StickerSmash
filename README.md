@@ -3,8 +3,7 @@
 # StickerSmash
 
 사용자 라이브러리에서 사진을 가져온 후,스티커를 붙인 후 스크린 샷을 찍어 라이브러리에 저장하는 앱입니다. 
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3495fb8f-3228-42ef-9a9c-ad8af84ad399/abc024fe-94bb-4c4a-8afb-d2549fe0c5b0/image.png)
+<img width="466" alt="image" src="https://github.com/user-attachments/assets/d7c8d64a-929f-4579-87f1-50afd7e35b81">
 
 React_Native기반 앱 개발 프레임워크인 expo를 경험해보기위해 만들었습니다. 
 
