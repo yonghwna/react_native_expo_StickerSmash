@@ -33,4 +33,31 @@ React_Native기반 앱 개발 프레임워크인 expo를 경험해보기위해 �
 
 스티커를 이동하는 과정에서 드래그 동작 시 좌표값 추적 및 스티커 위치 스타일 적용 로직이 인상적이었습니다. 
 
+pc에 비해 ui구현이 오밀조밀하다. 마치 아토믹 디자인 패턴에서 Organism 단계의 컴포넌트 안에서 작업하는 느낌이었다.  앱 구현에 대한 느낀 점 보다는 모바일 기기에서의 느낀 점이다. 
+
+그것 말고는 pc버전 웹의 구현과 비슷하다. 화면(View)을 만들고 그 속에 작은 컴포넌트들을 배치하고 이벤트 핸들러를 등록하고… 개발환경 구성이 제일 어려웠다. 
+
+개발을 하면서 강의에서 들은 대로 컴포넌트가 여러가지 일을 하지 않게 신경써서 만들었다. 
+
+예를 들면 모달 컴포넌트에 내부의 ui는 children으로 받으면서, 단순히 모달이 켜졌다 꺼졌다만 하게 만드는 식으로. 
+
+```jsx
+export default function EmojiPicker({ isVisible, children, onClose }) {
+  return (
+    <Modal animationType="slide" transparent={true} visible={isVisible}>
+      <View style={styles.modalContent}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Choose a sticker</Text>
+          <Pressable onPress={onClose}>
+            <MaterialIcons name="close" color="#fff" size={22} />
+          </Pressable>
+        </View>
+        {children}
+      </View>
+    </Modal>
+  );
+}
+```
+
+이러면 모달 재사용도 가능하고, 코드도 단순해진다.
 
