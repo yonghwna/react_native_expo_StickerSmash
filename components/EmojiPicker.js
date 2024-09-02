@@ -1,6 +1,8 @@
 import { Modal, View, Text, Pressable, StyleSheet } from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
+//이미지 나열 모달. children은 이모지 리스트를 받는다. 그냥 모달.
+//좋은데? 모달 기능 하나만을 구현하는 편이 확장성이 높다.
 export default function EmojiPicker({ isVisible, children, onClose }) {
   return (
     //transparent: 모달이 전체 뷰를 채우는지 bool

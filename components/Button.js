@@ -2,6 +2,7 @@ import { StyleSheet, View, Pressable, Text } from "react-native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 export default function Button({ label, theme, onPress }) {
+  //theme에 따라 스타일과 함수 변경.
   if (theme === "primary") {
     return (
       <View
@@ -10,6 +11,7 @@ export default function Button({ label, theme, onPress }) {
           { borderWidth: 4, borderColor: "#ffd33d", borderRadius: 18 },
         ]}
       >
+        {/* Pressable로 버튼을 구현하는것을 권장한다 */}
         <Pressable
           style={[styles.button, { backgroundColor: "#fff" }]}
           onPress={onPress}
